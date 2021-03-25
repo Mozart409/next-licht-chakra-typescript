@@ -5,7 +5,7 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "prod": "pm2 start --name=licht yarn -- start"
+    "prod": "pm2 start --name=licht npm -- start"
   },
   "dependencies": {
     "@chakra-ui/icons": "^1.0.5",
