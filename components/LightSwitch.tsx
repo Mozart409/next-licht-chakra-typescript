@@ -6,7 +6,7 @@ import axios from 'axios'
 export default function LightSwitch({ title, id }: any) {
   const handleOn = (id: any) => {
     axios
-      .get(`/sendon/${id}`, {
+      .get(`/api/sendon/${id}`, {
         headers: {
           'Access-Control-Allow-Origin': '*',
         },
@@ -23,7 +23,7 @@ export default function LightSwitch({ title, id }: any) {
 
   const handleOff = (id: any) => {
     axios
-      .get(`/sendoff/${id}`, {
+      .get(`/api/sendoff/${id}`, {
         headers: {
           'Access-Control-Allow-Origin': '*',
         },
