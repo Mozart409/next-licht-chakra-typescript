@@ -1,9 +1,40 @@
 import Head from 'next/head'
 
 import { ChakraProvider } from '@chakra-ui/react'
-
+import { Toaster } from 'react-hot-toast'
 import theme from '../theme'
-import { AppProps } from 'next/app'
+import type { AppProps, NextWebVitalsMetric } from 'next/app'
+
+export function reportWebVitals(metric: NextWebVitalsMetric) {
+  switch (metric.name) {
+    case 'FCP':
+      // handle FCP results
+      break
+    case 'LCP':
+      // handle LCP results
+      break
+    case 'CLS':
+      // handle CLS results
+      break
+    case 'FID':
+      // handle FID results
+      break
+    case 'TTFB':
+      // handle TTFB results
+      break
+    case 'Next.js-hydration':
+      // handle hydration results
+      break
+    case 'Next.js-route-change-to-render':
+      // handle route-change to render results
+      break
+    case 'Next.js-render':
+      // handle render results
+      break
+    default:
+      break
+  }
+}
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -162,6 +193,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         />
       </Head>
       <Component {...pageProps} />
+      <Toaster />
     </ChakraProvider>
   )
 }

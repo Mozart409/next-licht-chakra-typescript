@@ -2,6 +2,7 @@ import React from 'react'
 import { SimpleGrid, Button, Heading } from '@chakra-ui/react'
 import { MoonIcon, SunIcon } from '@chakra-ui/icons'
 import axios from 'axios'
+import toast from 'react-hot-toast'
 
 export default function LightSwitch({ title, id }: any) {
   const handleOn = (id: any) => {
@@ -13,11 +14,11 @@ export default function LightSwitch({ title, id }: any) {
       })
       .then(function (response) {
         // handle success
-        console.log(response)
+        toast.success(response.data)
       })
       .catch(function (error) {
         // handle error
-        console.log(error)
+        toast.error(error)
       })
   }
 
@@ -30,11 +31,11 @@ export default function LightSwitch({ title, id }: any) {
       })
       .then(function (response) {
         // handle success
-        console.log(response)
+        toast.success(response.data)
       })
       .catch(function (error) {
         // handle error
-        console.log(error)
+        toast.error(error)
       })
   }
   return (
