@@ -4,7 +4,8 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "prod": "pm2 start --name=licht yarn -- start"
   },
   "dependencies": {
     "@chakra-ui/icons": "^1.0.5",
@@ -15,6 +16,7 @@
     "axios": "^0.21.1",
     "framer-motion": "^3.5.2",
     "next": "latest",
+    "pm2": "^4.5.5",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-hot-toast": "^1.0.2"
