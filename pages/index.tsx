@@ -31,10 +31,7 @@ export default function Home() {
         <Spacer />
         <SimpleGrid column={{ base: '1', lg: '2' }} spacing={16}>
           <Box height="40px">
-            <LightSwitch title="Kleine Stehlampe" id="1" />
-          </Box>
-          <Box height="40px">
-            <LightSwitch title="Salzlampe" id="2" />
+            <LightSwitch title="Kugellampe" id="1" />
           </Box>
           <Box height="40px">
             <LightSwitch title="Stehlampe" id="3" />
