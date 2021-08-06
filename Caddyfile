@@ -1,5 +1,15 @@
-http://localhost:3000
+licht.local {
+  encode gzip zstd
+  #tls ./certs/_wildcard.sqila.local.pem ./certs/_wildcard.sqila.local-key.pem
+    reverse_proxy localhost:3000 {
+      header_up Host                "localhost"
+      header_up X-Real-IP           {remote}
+      header_up X-Forwarded-Host    "localhost"
+      header_up X-Forwarded-Server  "localhost"
+      header_up X-Forwarded-Port    {port}
+      header_up X-Forwarded-For     {remote}
+      header_up X-Forwarded-Proto   {scheme}
+    }
 
-tls internal
-encode zstd gzip
-reverse_proxy 127.0.0.1:80
+  
+}
