@@ -1,4 +1,4 @@
 licht.local {
-  encode gzip zstd
-    reverse_proxy localhost:3000  
+        encode gzip zstd
+        reverse_proxy localhost:3000
 }
